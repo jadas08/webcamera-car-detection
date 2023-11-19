@@ -14,8 +14,9 @@ This Django application is designed to detect and count cars using a webcam. Lev
    ```bash
    git clone https://github.com/jadas08/webcamera-car-detection.git
    cd your-repository-name
-
-2. **Install requirements**:
+2. **Locally add files for the yolo model in the trained-models folder**:
+   You will need yolov3.weights, yolov3.cfg and coco.names. You will also need two folders in the media folder - raw and processed - these will be used as media root.
+3. **Install requirements**:
    ```bash
    pip install -r requirements.txt
 
