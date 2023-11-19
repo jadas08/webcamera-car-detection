@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Picture Taken</h2>
+    <img src="{{ image_path }}" alt="Captured image">
+    
+    {% if car_detection_result %}
+        <!-- Display car detection result -->
+        <p>{{ car_detection_result }}</p>
+    {% else %}
+        <!-- Display form to detect cars -->
+        <form method="post" action="">
+            {% csrf_token %}
+            <button type="submit">Detect Cars</button>
+        </form>    
+    {% endif %}
+{% endblock %}

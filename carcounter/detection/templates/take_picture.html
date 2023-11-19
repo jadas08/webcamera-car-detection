@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="capture-container">
+        <form method="post" action="{% url 'take_picture' %}" class="capture-form">
+            {% csrf_token %}
+            <button type="submit" class="capture-button">Take Picture</button>
+        </form>
+    </div>
+{% endblock %}

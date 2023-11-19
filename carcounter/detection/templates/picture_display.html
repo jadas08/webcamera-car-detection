@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="result-display">
+        <h2>Car Detection Result</h2>
+        <div class="image-container">
+            <img src="{{ image_path }}" alt="Car detection result" class="result-image">
+        </div>
+        <div class="result-text">
+            {% if car_detection_result %}
+                <p>Result of detection <span class="highlight">{{ car_detection_result }}</span></p>
+            {% else %}
+                <p>No cars detected or error in detection.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

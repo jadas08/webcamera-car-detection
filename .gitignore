@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/
+db.sqlite3
+carcounter/media/*
+trained-models/*
+car-detection-env

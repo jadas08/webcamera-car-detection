@@ -1,0 +1,24 @@
+<nav>
+    <ul>
+        <li class='navbar-list-header'>Processed Images</li>
+        {% for file in processed_files %}
+            {% if forloop.counter <= 5 %}
+                <li><a href="{{ MEDIA_URL }}processed/{{ file.name }}" target="_blank">{{ file.time }}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if processed_files|length > 5 %}
+            <li><a href="#showMoreProcessed">Show more</a></li>
+        {% endif %}
+    </ul>
+    <ul>
+        <li class='navbar-list-header'>Raw Images</li>
+        {% for file in raw_files %}
+            {% if forloop.counter <= 5 %}
+                <li><a href="{{ MEDIA_URL }}raw/{{ file.name }}" target="_blank">{{ file.time }}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if raw_files|length > 5 %}
+            <li><a href="#showMoreRaw">Show more</a></li>
+        {% endif %}
+    </ul>
+</nav>
